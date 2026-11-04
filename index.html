@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Lauren Dupuis: real, messy motherhood. A letter from me to you.">
+<title>Lauren Dupuis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Instrument+Serif:ital@0;1&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one narrow phone-first column like a link-in-bio page: avatar, big headline, a hero card, then sections of tappable cards. Lauren's brand: Brow Studio pinks, Gochi Hand + Instrument Serif + Nunito. */
+:root{
+  --white:#FFFFFF; --petal:#F8ECEB; --blush:#EFD5D4; --pink:#EABCC2; --ink:#231F20; --muted:#6E6364; --line:#E7CFCD;
+  --cute:"Gochi Hand","Bradley Hand",cursive; --serif:"Instrument Serif",Georgia,serif; --body:"Nunito",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--white:#2A2324;--petal:#221C1D;--blush:#3A2E2F;--pink:#B98A91;--ink:#F8ECEB;--muted:#C9B6B7;--line:#4A3B3C;color-scheme:dark}}
+:root[data-theme="dark"]{--white:#2A2324;--petal:#221C1D;--blush:#3A2E2F;--pink:#B98A91;--ink:#F8ECEB;--muted:#C9B6B7;--line:#4A3B3C;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.page{max-width:480px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 48px;display:flex;flex-direction:column;gap:22px}
+header{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.avatar{width:84px;height:84px;border-radius:50%;background:var(--pink);border:4px solid var(--white);box-shadow:0 2px 10px rgba(35,31,32,.12);display:grid;place-content:center;font-family:var(--cute);font-size:30px;color:var(--ink)}
+.handle{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,10vw,46px);line-height:1.02;margin:4px 0 0;text-wrap:balance}
+h1 em{font-family:var(--cute);font-style:normal}
+.tag{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.hero{background:var(--white);border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(35,31,32,.08)}
+.hero-art{background:repeating-linear-gradient(90deg,var(--petal) 0 22px,var(--blush) 22px 44px);aspect-ratio:16/10;display:grid;place-content:center;text-align:center;padding:16px;max-width:100%}
+.hero-art .t{font-family:var(--serif);font-size:30px;line-height:1.05}
+.hero-art .s{font-family:var(--cute);font-size:20px;margin-top:6px}
+.hero-body{padding:20px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.hero-body h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;margin:0}
+.hero-body h2 em{font-family:var(--cute);font-style:normal;white-space:nowrap}
+.hero-body p{margin:0;color:var(--muted);font-size:15px;max-width:34ch}
+.cta{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border-radius:999px;margin-top:4px}
+.cta:focus-visible,.card:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.note{font-family:var(--cute);font-size:20px;transform:rotate(-2deg)}
+.section{display:flex;flex-direction:column;gap:10px}
+.label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin:6px 4px 0}
+.card{display:grid;grid-template-columns:64px 1fr 40px;gap:14px;align-items:center;background:var(--petal);border:1.5px solid var(--ink);border-radius:18px;padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:0 4px 14px rgba(35,31,32,.06)}
+.thumb{width:64px;height:64px;border-radius:12px;background:var(--pink);display:grid;place-content:center;font-family:var(--cute);font-size:24px;text-align:center;line-height:1}
+.card .name{font-family:var(--serif);font-size:22px;line-height:1.1}
+.card .sub{font-size:13px;color:var(--muted)}
+.badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink);border-radius:999px;padding:2px 8px;margin-bottom:4px}
+.arrow{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--white);display:grid;place-content:center;font-size:18px}
+.socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.socials a{font-size:13px;font-weight:700;color:var(--ink);background:var(--white);border:1.5px solid var(--ink);border-radius:999px;padding:8px 14px;text-decoration:none}
+footer{text-align:center;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div class="avatar" aria-label="Your photo goes here">LD</div>
+    <span class="handle">@itslaurendupuis</span>
+    <h1>Real, messy <em>motherhood.</em></h1>
+    <span class="tag">Faith · boy mom x2 · south louisiana</span>
+  </header>
+
+  <article class="hero">
+    <div class="hero-art" aria-label="Your photo goes here"><div><div class="t">From my floor to yours</div><div class="s">a letter from me to you</div></div></div>
+    <div class="hero-body">
+      <span class="kicker">Hey friend</span>
+      <h2>For every mom on the <em>bathroom floor.</em></h2>
+      <p>Whether someone's behind you or not, I wrote you a letter about where I've been and why I don't want you going through this alone. Every week, I'll send you an honest email, just me checking on you.</p>
+      <a class="cta" href="https://lauren-dupuis.kit.com/eb780776b6" target="_blank" rel="noopener">Send it to me →</a>
+      <span class="note">you're doing better than you think</span>
+    </div>
+  </article>
+
+  <section class="section" aria-label="More from me">
+    <span class="label">More from me</span>
+    <a class="card" href="https://www.amazon.com/shop/walkoflaur" target="_blank" rel="noopener">
+      <div class="thumb">shop</div>
+      <div><span class="badge">Favorites</span><div class="name">My Amazon finds</div><div class="sub">The things I actually use</div></div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </a>
+    <a class="card" href="https://www.facebook.com/share/1H2mZidszq/" target="_blank" rel="noopener">
+      <div class="thumb">hi!</div>
+      <div><div class="name">Come hang out on Facebook</div><div class="sub">Where I share the most</div></div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </a>
+  </section>
+
+  <nav class="socials" aria-label="Socials">
+    <a href="https://www.instagram.com/itslaurendupuis/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@itslaurendupuis" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.facebook.com/share/1H2mZidszq/" target="_blank" rel="noopener">Facebook</a>
+  </nav>
+
+  <footer>If you're in crisis, call or text 988. Maternal Mental Health Hotline: 1-833-852-6262.</footer>
+</div>
+
+</body>
+</html>
