@@ -74,24 +74,42 @@ form.signup button[disabled]{opacity:.6;cursor:wait}
 .msg{font-size:14px;font-weight:700;margin:0}
 .done{display:flex;flex-direction:column;gap:6px;align-items:center}
 .done .big{font-family:var(--cute);font-size:26px}
+
+/* Letter-paper hero, distinct from the striped hero on the homepage */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.topbar .back{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.topbar .back:hover{color:var(--ink)}
+.topbar .back:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:4px}
+.topbar .mini{font-family:var(--cute);font-size:22px;line-height:1}
+.paper{--row:30px;position:relative;background:var(--white);border:1.5px solid var(--ink);border-radius:6px 22px 22px 22px;box-shadow:6px 6px 0 var(--pink);padding:24px 22px 26px;display:flex;flex-direction:column;gap:14px;text-align:left;overflow:hidden}
+.paper .stamp{position:absolute;top:14px;right:14px;width:46px;height:54px;border:2px dashed var(--ink);border-radius:4px;background:var(--pink);display:grid;place-content:center;font-size:22px;transform:rotate(6deg);z-index:1}
+.ruled{margin:0 -22px;padding:0 22px;background-image:repeating-linear-gradient(180deg,transparent 0 calc(var(--row) - 1px),var(--line) calc(var(--row) - 1px) var(--row))}
+.ruled>*{display:block;position:relative;margin:0}
+.ruled .kicker{line-height:var(--row);color:var(--muted);padding-right:60px;top:9px}
+.ruled .dear{font-family:var(--cute);font-size:28px;line-height:var(--row);top:7px}
+.ruled h1{font-size:32px;line-height:calc(var(--row)*2);top:16px;text-wrap:wrap}
+.ruled p{color:var(--muted);font-size:15.5px;line-height:var(--row);max-width:none;top:1.5px}
+.paper form.signup{margin-top:6px}
+.paper .fine{max-width:340px;text-align:center}
+.paper .sign{font-family:var(--cute);font-size:24px;text-align:right;transform:rotate(-2deg)}
 </style>
 
 </head>
 <body>
 <div class="page">
-  <header>
-    <div class="avatar" aria-label="Your photo goes here">LD</div>
-    <span class="name">Lauren Dupuis</span>
-    <span class="handle">@itslaurendupuis</span>
-    <span class="tag">Faith · boy mom x2 · south louisiana</span>
-  </header>
+  <nav class="topbar" aria-label="Back">
+    <a href="https://itslaurendupuis.com/" class="back">← itslaurendupuis.com</a>
+    <span class="mini">Lauren Dupuis</span>
+  </nav>
 
-  <article class="card">
-    <div class="art"><div class="t">From my floor to yours</div><div class="s">a letter from me to you</div></div>
-    <div class="body">
-      <span class="kicker">Hey friend</span>
-      <h1>For every mom on the <em>bathroom floor.</em></h1>
-      <p>Whether someone's behind you or not. I wrote you a letter about my own bathroom floor, and every Sunday night after that I'll send you an honest email, just me checking on you.</p>
+  <article class="paper">
+    <div class="stamp" aria-hidden="true">♡</div>
+    <div class="ruled">
+    <span class="kicker">To: you · From: Lauren</span>
+    <div class="dear">Dear mama,</div>
+    <h1>I wrote this one <em>for you.</em></h1>
+    <p>It's the letter I needed when I was on my own bathroom floor. Put your email in and it's yours. Then every Sunday night, I'll write you again, just me checking on you.</p>
+    </div>
       <form class="signup" action="https://app.kit.com/forms/10143743/subscriptions" method="post" data-form>
         <label for="email1" class="kicker" style="position:absolute;left:-9999px">Your email</label>
         <input id="email1" name="email_address" type="email" required autocomplete="email" placeholder="Your email address">
@@ -99,8 +117,7 @@ form.signup button[disabled]{opacity:.6;cursor:wait}
         <p class="msg" role="status" hidden></p>
       </form>
       <span class="fine">Free. Unsubscribe anytime.</span>
-      <span class="note">you're doing better than you think</span>
-    </div>
+    <span class="sign">Love, Lauren</span>
   </article>
 
   <section class="section" aria-label="What you'll get">
