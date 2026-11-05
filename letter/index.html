@@ -177,7 +177,7 @@ document.querySelectorAll('form[data-form]').forEach(function(f){
       .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
       .then(function(res){
         if(res.ok && (!res.j.status || res.j.status==='success' || res.j.status==='quarantined')){
-          f.outerHTML='<div class="done" role="status"><span class="big">check your email, friend</span><p class="fine">Tap the button in the email from me and your letter will download.</p></div>';
+          f.outerHTML='<div class="done" role="status"><span class="big">check your email, friend</span><p class="fine">Your letterTap the button in the email from me and your letter will download.rsquo;s on its way. Check your inbox (and Promotions, just in case).</p></div>';
         } else { throw new Error(); }
       })
       .catch(function(){b.disabled=false;b.textContent='Send it to me →';m.textContent="That didn't go through. Check your email address and try again.";m.hidden=false;});
