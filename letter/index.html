@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A free letter for every mom on the bathroom floor, plus an honest email every Sunday night. From Lauren Dupuis.">
+<meta property="og:title" content="From my floor to yours">
+<meta property="og:description" content="A free letter for every mom on the bathroom floor, from Lauren Dupuis.">
+<title>From My Floor to Yours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Instrument+Serif:ital@0;1&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: same narrow phone-first column as the links page, with a bordered striped hero card, then what you get, Lauren's note, sample letters and a second signup card. */
+:root{
+  --white:#FFFFFF; --petal:#F8ECEB; --blush:#EFD5D4; --pink:#EABCC2; --stripe:#F3E1E0; --ink:#231F20; --muted:#6E6364; --line:#E7CFCD;
+  --cute:"Gochi Hand","Bradley Hand",cursive; --serif:"Instrument Serif",Georgia,serif; --body:"Nunito",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--white:#2A2324;--petal:#221C1D;--blush:#3A2E2F;--pink:#B98A91;--stripe:#2E2526;--ink:#F8ECEB;--muted:#C9B6B7;--line:#4A3B3C;color-scheme:dark}}
+:root[data-theme="dark"]{--white:#2A2324;--petal:#221C1D;--blush:#3A2E2F;--pink:#B98A91;--stripe:#2E2526;--ink:#F8ECEB;--muted:#C9B6B7;--line:#4A3B3C;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+.page{max-width:500px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 48px;display:flex;flex-direction:column;gap:28px}
+header{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.avatar{width:84px;height:84px;border-radius:50%;background:var(--pink);border:4px solid var(--white);box-shadow:0 2px 10px rgba(35,31,32,.12);display:grid;place-content:center;font-family:var(--cute);font-size:30px;color:var(--ink)}
+.name{font-family:var(--cute);font-size:30px;line-height:1}
+.handle{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.tag{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+
+.card{background:var(--white);border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(35,31,32,.08)}
+.art{background:repeating-linear-gradient(90deg,var(--petal) 0 22px,var(--blush) 22px 44px);padding:40px 20px;text-align:center}
+.art .t{font-family:var(--serif);font-size:clamp(34px,9vw,42px);line-height:1.02;text-wrap:balance}
+.art .s{font-family:var(--cute);font-size:21px;margin-top:8px}
+.body{padding:24px 22px 26px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.kicker,.label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+h1,h2{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,8vw,36px);line-height:1.08}
+h2{font-size:28px;line-height:1.1}
+h1 em,h2 em{font-family:var(--cute);font-style:normal}
+.body p{margin:0;color:var(--muted);font-size:15.5px;max-width:36ch}
+.cta{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:15px 26px;border-radius:999px;margin-top:4px}
+.cta:hover{transform:translateY(-1px)}
+.cta:focus-visible,.socials a:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.fine{font-size:12.5px;color:var(--muted)}
+.note{font-family:var(--cute);font-size:21px;transform:rotate(-2deg)}
+
+.section{display:flex;flex-direction:column;gap:10px}
+.label{margin:0 4px}
+.item{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;background:var(--petal);border:1.5px solid var(--ink);border-radius:18px;padding:12px 14px}
+.thumb{width:56px;height:56px;border-radius:12px;background:var(--pink);display:grid;place-content:center;font-family:var(--cute);font-size:21px;line-height:1;text-align:center}
+.item .n{font-family:var(--serif);font-size:21px;line-height:1.15}
+.item .d{font-size:13.5px;color:var(--muted)}
+
+.letter{background:var(--petal);border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;gap:12px}
+.letter p{margin:0}
+.letter .q{font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.2}
+.letter .sign{font-family:var(--cute);font-size:24px}
+
+.subjects{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.subjects li{background:var(--white);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column}
+.subjects .sub{font-family:var(--serif);font-size:20px;line-height:1.2}
+.subjects .pre{font-size:13px;color:var(--muted)}
+
+.socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.socials a{font-size:13px;font-weight:700;color:var(--ink);background:var(--white);border:1.5px solid var(--ink);border-radius:999px;padding:8px 14px;text-decoration:none}
+footer{text-align:center;font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:6px;max-width:42ch;margin:0 auto}
+footer strong{color:var(--ink)}
+@media (prefers-reduced-motion: reduce){.cta:hover{transform:none}}
+
+form.signup{display:flex;flex-direction:column;gap:10px;width:100%;max-width:340px;margin-top:4px}
+form.signup input{font:inherit;font-size:16px;padding:14px 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--white);color:var(--ink);text-align:center;width:100%}
+form.signup input:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+form.signup button{font-family:var(--body);cursor:pointer;border:0;margin-top:0;width:100%}
+form.signup button[disabled]{opacity:.6;cursor:wait}
+.msg{font-size:14px;font-weight:700;margin:0}
+.done{display:flex;flex-direction:column;gap:6px;align-items:center}
+.done .big{font-family:var(--cute);font-size:26px}
+</style>
+
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="avatar" aria-label="Your photo goes here">LD</div>
+    <span class="name">Lauren Dupuis</span>
+    <span class="handle">@itslaurendupuis</span>
+    <span class="tag">Faith · boy mom x2 · south louisiana</span>
+  </header>
+
+  <article class="card">
+    <div class="art"><div class="t">From my floor to yours</div><div class="s">a letter from me to you</div></div>
+    <div class="body">
+      <span class="kicker">Hey friend</span>
+      <h1>For every mom on the <em>bathroom floor.</em></h1>
+      <p>Whether someone's behind you or not. I wrote you a letter about my own bathroom floor, and every Sunday night after that I'll send you an honest email, just me checking on you.</p>
+      <form class="signup" action="https://app.kit.com/forms/10143743/subscriptions" method="post" data-form>
+        <label for="email1" class="kicker" style="position:absolute;left:-9999px">Your email</label>
+        <input id="email1" name="email_address" type="email" required autocomplete="email" placeholder="Your email address">
+        <button class="cta" type="submit">Send it to me →</button>
+        <p class="msg" role="status" hidden></p>
+      </form>
+      <span class="fine">Free. Unsubscribe anytime.</span>
+      <span class="note">you're not alone</span>
+    </div>
+  </article>
+
+  <section class="section" aria-label="What you'll get">
+    <span class="label">What you'll get</span>
+    <div class="item">
+      <div class="thumb">1</div>
+      <div><div class="n">My letter, right away</div><div class="d">The one I needed when I was on that floor</div></div>
+    </div>
+    <div class="item">
+      <div class="thumb">sun</div>
+      <div><div class="n">A Sunday night letter</div><div class="d">The good, the bad and the ugly of my week</div></div>
+    </div>
+    <div class="item">
+      <div class="thumb">♡</div>
+      <div><div class="n">Someone in your corner</div><div class="d">Hit reply anytime. I read them.</div></div>
+    </div>
+  </section>
+
+  <section class="letter" aria-label="Why I started this">
+    <span class="label">Why I started this</span>
+    <p class="q">I'm still in it too. I'm not writing to you from the other side.</p>
+    <p>When my video went viral, my inbox filled up with moms who had no support. And moms who had plenty of support and were still struggling. That's me. So I'm sharing all of it with you, the anger, the medicine, the days I didn't like myself, so you know you're not the only one.</p>
+    <span class="sign">Love, Lauren</span>
+  </section>
+
+  <section class="section" aria-label="Letters coming up">
+    <span class="label">Some of what's coming</span>
+    <ul class="subjects">
+      <li><span class="sub">PPD isn't just sadness</span><span class="pre">mine looked angry</span></li>
+      <li><span class="sub">"Let me know what you need"</span><span class="pre">one more question my brain can't answer</span></li>
+      <li><span class="sub">I threw away my son's homework</span><span class="pre">and decided I was a bad mom</span></li>
+      <li><span class="sub">The medicine part nobody posts about</span><span class="pre">nausea, no sleep, and a denial letter</span></li>
+    </ul>
+  </section>
+
+  <article class="card">
+    <div class="body">
+      <h2>Let me send you <em>my letter.</em></h2>
+      <p>Pop your email in and check your inbox.</p>
+      <form class="signup" action="https://app.kit.com/forms/10143743/subscriptions" method="post" data-form>
+        <label for="email2" class="kicker" style="position:absolute;left:-9999px">Your email</label>
+        <input id="email2" name="email_address" type="email" required autocomplete="email" placeholder="Your email address">
+        <button class="cta" type="submit">Send it to me →</button>
+        <p class="msg" role="status" hidden></p>
+      </form>
+    </div>
+  </article>
+
+  <nav class="socials" aria-label="Socials">
+    <a href="https://www.instagram.com/itslaurendupuis/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@itslaurendupuis" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.facebook.com/share/1H2mZidszq/" target="_blank" rel="noopener">Facebook</a>
+  </nav>
+
+  <footer>
+    <span>I'm not a doctor or a therapist, just a mom who's been there.</span>
+    <span>If it ever gets really dark, please don't wait. Call or text <strong>988</strong>, or the National Maternal Mental Health Hotline at <strong>1-833-852-6262</strong> (free, 24/7). In immediate danger, call 911.</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('form[data-form]').forEach(function(f){
+  f.addEventListener('submit',function(e){
+    if(!window.fetch) return;
+    e.preventDefault();
+    var b=f.querySelector('button'),m=f.querySelector('.msg');
+    b.disabled=true;b.textContent='Sending…';m.hidden=true;
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(res){
+        if(res.ok && (!res.j.status || res.j.status==='success' || res.j.status==='quarantined')){
+          f.outerHTML='<div class="done" role="status"><span class="big">check your email, friend</span><p class="fine">Tap the button in the email from me and your letter will download.</p></div>';
+        } else { throw new Error(); }
+      })
+      .catch(function(){b.disabled=false;b.textContent='Send it to me →';m.textContent="That didn't go through. Check your email address and try again.";m.hidden=false;});
+  });
+});
+</script>
+</body>
+</html>
