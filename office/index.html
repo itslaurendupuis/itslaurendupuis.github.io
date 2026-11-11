@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Setting up my new office one thing at a time: the desk mat, desk, chair and everything else, with links.">
+<title>Setting up my office | Lauren Dupuis</title>
+<meta property="og:title" content="Setting up my office, one thing at a time">
+<meta property="og:image" content="https://itslaurendupuis.com/office/img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Instrument+Serif:ital@0;1&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: same reading column as Maverick's Jam. Hero card with a wood-grain strip, then one section per item: photo, a few plain lines, a "shop it" card. Colors come from the office itself: beige mat, warm wood, espresso text, a touch of her blush. */
+:root{
+  --white:#FFFFFF; --petal:#F6F0E8; --line:#E5DACB; --ink:#3B2A20; --muted:#76604F;
+  --accent:#8B5E3C; --blush:#EABCC2; --wood1:#B88A5A; --wood2:#A0744A;
+  --note-bg:#FFF4C9; --note-ink:#4A3A00;
+  --cute:"Gochi Hand","Bradley Hand",cursive; --serif:"Instrument Serif",Georgia,serif; --body:"Nunito",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--white:#1B1714;--petal:#26201B;--line:#3B322A;--ink:#F3EBE2;--muted:#C4B3A2;--accent:#D9A878;--blush:#E7AEB6;--wood1:#8A6440;--wood2:#74522F;--note-bg:#4A3F1C;--note-ink:#FFF1BF;color-scheme:dark}}
+:root[data-theme="dark"]{--white:#1B1714;--petal:#26201B;--line:#3B322A;--ink:#F3EBE2;--muted:#C4B3A2;--accent:#D9A878;--blush:#E7AEB6;--wood1:#8A6440;--wood2:#74522F;--note-bg:#4A3F1C;--note-ink:#FFF1BF;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+.page{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px;display:flex;flex-direction:column;gap:36px}
+a{color:inherit}
+img{max-width:100%;display:block}
+.draft{background:var(--note-bg);color:var(--note-ink);border-radius:14px;padding:12px 16px;font-size:14px;line-height:1.5;display:flex;flex-direction:column;gap:6px}
+.draft b{font-weight:800}
+.draft ul{margin:0;padding-left:18px}
+.top{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.handle{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.hero{border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(59,42,32,.08)}
+.hero-head{background:var(--petal);padding:28px 20px 24px;text-align:center;display:flex;flex-direction:column;gap:6px}
+.kicker,.eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8.5vw,48px);line-height:1.02;margin:0;text-wrap:balance}
+h1 em,h2 em{font-family:var(--cute);font-style:normal;color:var(--accent)}
+.hero-head .s{font-family:var(--cute);font-size:21px;color:var(--muted)}
+.grain{height:14px;background:repeating-linear-gradient(100deg,var(--wood1) 0 9px,var(--wood2) 9px 13px,var(--wood1) 13px 26px)}
+.hero img{width:100%;height:auto;max-width:100%}
+.disclose{font-size:13px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:10px;margin:0}
+.intro{display:flex;flex-direction:column;gap:14px}
+.intro p{margin:0}
+.jump{display:flex;flex-direction:column;gap:8px}
+.jump-label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.jump ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.jump a{display:inline-block;font-size:14px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px;background:var(--petal)}
+.jump a.soon{border-style:dashed}
+.jump a:focus-visible,.shop:focus-visible,.cta:focus-visible{outline:3px solid var(--blush);outline-offset:3px}
+section{display:flex;flex-direction:column;gap:14px;scroll-margin-top:16px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,7vw,38px);line-height:1.05;margin:0;text-wrap:balance}
+section p{margin:0}
+figure{margin:0;display:flex;flex-direction:column;gap:6px}
+figure img{width:100%;border-radius:16px;max-width:100%}
+figcaption{font-size:13px;color:var(--muted)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair img{aspect-ratio:3/4;object-fit:cover}
+.wide img{aspect-ratio:4/5;object-fit:cover}
+.shop{display:grid;grid-template-columns:1fr 40px;gap:14px;align-items:center;background:var(--petal);border:1.5px solid var(--ink);border-radius:18px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.shop > div{min-width:0}
+.shop:has(.thumb){grid-template-columns:64px 1fr 40px}
+.thumb{width:64px;height:64px;max-width:100%;object-fit:contain;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:4px}
+.shop .name{font-family:var(--serif);font-size:22px;line-height:1.1}
+.shop .sub{font-size:13px;color:var(--muted);line-height:1.45}
+.arrow{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--white);display:grid;place-content:center;font-size:18px}
+.shops{display:flex;flex-direction:column;gap:10px}
+.tip{font-family:var(--cute);font-size:21px;line-height:1.3;transform:rotate(-1deg);padding-left:4px;color:var(--accent)}
+.soon-wrap{border:1.5px dashed var(--ink);border-radius:22px;padding:22px 18px;display:flex;flex-direction:column;gap:14px;background:var(--petal)}
+.soon-wrap .shop{background:var(--white)}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px}
+.nolink{display:grid;grid-template-columns:1fr;gap:2px;border:1.5px dashed var(--line);border-radius:18px;padding:14px 16px;background:var(--white)}
+.nolink .name{font-family:var(--serif);font-size:22px;line-height:1.1}
+.nolink .sub{font-size:13px;color:var(--muted)}
+.outro{background:var(--petal);border:1.5px solid var(--ink);border-radius:22px;padding:24px 20px;display:flex;flex-direction:column;gap:12px;text-align:center;align-items:center}
+.outro h2{font-size:30px}
+.outro p{margin:0}
+.cta{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border-radius:999px}
+footer{text-align:center;font-size:12px;color:var(--muted)}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top">
+    <a class="handle" href="https://itslaurendupuis.com/">@itslaurendupuis</a>
+  </div>
+
+  <article class="hero">
+    <div class="hero-head">
+      <span class="kicker">New warehouse · new desk</span>
+      <h1>Setting up my <em>office</em></h1>
+      <span class="s">one thing at a time</span>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <img src="img/hero.jpg" alt="My new office: wood desk with a beige desk mat, pink iMac on a clear stand, white chair and an olive tree in the corner" width="1086" height="1448">
+  </article>
+
+  <p class="disclose">This post has affiliate links. As an Amazon Associate I earn from qualifying purchases. It doesn't cost you anything extra.</p>
+
+  <div class="intro">
+    <p>We just moved warehouses, which means I finally get a new office space. I'm building it out from scratch, one thing at a time. Some of it is here and the rest still hasn't came in.</p>
+    <p>Yall asked where everything is from, so it's all right here. Each thing has its own little section with a link. Stuff I ordered but haven't gotten yet is at the bottom, and I'll keep adding to this as it comes in.</p>
+  </div>
+
+  <nav class="jump" aria-label="Jump to an item">
+    <span class="jump-label">Jump to</span>
+    <ol>
+      <li><a href="#mat">Desk mat</a></li>
+      <li><a href="#desk">Desk</a></li>
+      <li><a href="#chair">Chair</a></li>
+      <li><a href="#imac">iMac + stand</a></li>
+      <li><a href="#coasters">Coasters</a></li>
+      <li><a href="#room">Rug + olive tree</a></li>
+      <li><a class="soon" href="#soon">On the way</a></li>
+    </ol>
+  </nav>
+
+  <section id="mat">
+    <span class="eyebrow">The one from the video</span>
+    <h2>The <em>desk mat</em></h2>
+    <p>This is the one yall saw. It rolls right out and lays flat.</p>
+    <p>I did a spill test on it and it wiped right off. The back is cork.</p>
+    <a class="shop" href="https://link.amazon/B0gInjBIg" target="_blank" rel="noopener sponsored">
+      <img class="thumb" src="img/p-mat.jpg" alt="Beige desk mat with cork back" loading="lazy">
+      <div><div class="name">Shop the desk mat</div><div class="sub">Amazon</div></div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </a>
+  </section>
+
+  <section id="desk">
+    <span class="eyebrow">Where it started</span>
+    <h2>The <em>desk</em></h2>
+    <p>The desk came first. Everything else is getting built around it.</p>
+    <a class="shop" href="https://link.amazon/B0gRcBXuh" target="_blank" rel="noopener sponsored">
+      <img class="thumb" src="img/p-desk.jpg" alt="Wood desk" loading="lazy">
+      <div><div class="name">Shop the desk</div><div class="sub">Amazon</div></div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </a>
+  </section>
+
+  <section id="chair">
+    <span class="eyebrow">Built it myself</span>
+    <h2>The <em>chair</em></h2>
+    <p>I put this one together by myself. So. many. pieces. It has a hidden footrest and it fully reclines.</p>
+    <p class="tip">worth it.</p>
+    <a class="shop" href="https://link.amazon/B063mbvSY" target="_blank" rel="noopener sponsored">
+      <img class="thumb" src="img/p-chair.jpg" alt="White desk chair" loading="lazy">
+      <div><div class="name">Shop the chair</div><div class="sub">Amazon</div></div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </a>
+  </section>
+
+  <section id="imac">
+    <span class="eyebrow">Up off the desk</span>
+    <h2>iMac + <em>stand</em></h2>
+    <p>My iMac sits up on a clear stand, so there's room under it on the mat.</p>
+    <div class="shops">
+      <a class="shop" href="https://link.amazon/B0dieGCmb" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-imac.jpg" alt="Pink iMac" loading="lazy">
+        <div><div class="name">Shop the iMac</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/B06RHB23J" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-stand.jpg" alt="Clear acrylic computer stand" loading="lazy">
+        <div><div class="name">Shop the computer stand</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="coasters">
+    <span class="eyebrow">The important part</span>
+    <h2>The <em>coasters</em></h2>
+    <p class="tip">and coffee. always coffee.</p>
+    <a class="shop" href="https://link.amazon/B04fh6PQR" target="_blank" rel="noopener sponsored">
+      <img class="thumb" src="img/p-coasters.jpg" alt="White stone coasters" loading="lazy">
+      <div><div class="name">Shop the coasters</div><div class="sub">Amazon</div></div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </a>
+  </section>
+
+  <section id="room">
+    <span class="eyebrow">The rest of the room</span>
+    <h2>Rug + <em>olive tree</em></h2>
+    <p>The rug under the desk, and the olive tree in the corner with its vase.</p>
+    <div class="shops">
+      <a class="shop" href="https://link.amazon/B0dRixgo2" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-rug.jpg" alt="Soft pink rug" loading="lazy">
+        <div><div class="name">Shop the rug</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/B033uloz3" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-olive.jpg" alt="Faux olive tree" loading="lazy">
+        <div><div class="name">Shop the olive tree</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/B043SjM2o" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-vase.jpg" alt="Textured beige planter" loading="lazy">
+        <div><div class="name">Shop the olive tree vase</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="soon" class="soon-wrap">
+    <span class="eyebrow">Ordered, still waiting</span>
+    <h2>Still on the <em>way</em></h2>
+    <p>I ordered these but they haven't came in yet, so I haven't tried them. I'll tell yall if they're worth it once they get here. The keyboard and mouse are upgrades from the ones in the video.</p>
+    <div class="shops">
+      <a class="shop" href="https://link.amazon/B0cmpr9TE" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-keyboard.jpg" alt="Cream and brown keyboard" loading="lazy">
+        <div><div class="name">New keyboard</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/B0a3vUDAu" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-mouse.jpg" alt="Cream and brown wireless mouse" loading="lazy">
+        <div><div class="name">New mouse</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/B01wfzUSy" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-basket.jpg" alt="Woven blanket basket" loading="lazy">
+        <div><div class="name">Blanket basket</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://on.ltk.com/+4wr21297bic3dCKJObM8Uw" target="_blank" rel="noopener sponsored">
+        <div><div class="name">Blanket</div><div class="sub">LTK</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://www.uniqfind.com/products/ivory-white-imac-skin?variant=52638815191172" target="_blank" rel="noopener">
+        <div><div class="name">Ivory iMac skin <span class="tag">not an affiliate link</span></div><div class="sub">Uniqfind</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/B0chPxf8T" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-flowers.jpg" alt="Faux flowers" loading="lazy">
+        <div><div class="name">Desk flowers</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/B0j6DRHNO" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-flowervase.jpg" alt="White ceramic vase" loading="lazy">
+        <div><div class="name">Desk flower vase</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+      <a class="shop" href="https://link.amazon/A01juZTqT" target="_blank" rel="noopener sponsored">
+        <img class="thumb" src="img/p-books.jpg" alt="Decorative book stack" loading="lazy">
+        <div><div class="name">Decorative books</div><div class="sub">Amazon</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
+    </div>
+  </section>
+
+  <div class="outro">
+    <h2>More is <em>coming</em></h2>
+    <p>I'm adding one thing at a time, so check back. Everything I link is on my Amazon storefront too.</p>
+    <a class="cta" href="https://www.amazon.com/shop/walkoflaur" target="_blank" rel="noopener sponsored">See my storefront →</a>
+  </div>
+
+  <footer>© Lauren Dupuis · <a href="https://itslaurendupuis.com/">itslaurendupuis.com</a></footer>
+</div>
+</body>
+</html>
