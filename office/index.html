@@ -12,13 +12,13 @@
 <style>
 /* Layout: same reading column as Maverick's Jam. Hero card with a wood-grain strip, then one section per item: photo, a few plain lines, a "shop it" card. Colors come from the office itself: beige mat, warm wood, espresso text, a touch of her blush. */
 :root{
-  --white:#FFFFFF; --petal:#F6F0E8; --line:#E5DACB; --ink:#3B2A20; --muted:#76604F;
-  --accent:#8B5E3C; --blush:#EABCC2; --wood1:#B88A5A; --wood2:#A0744A;
-  --note-bg:#FFF4C9; --note-ink:#4A3A00;
+  --white:#FFFDFB; --petal:#F7F4F1; --line:#DDD4CD; --ink:#3D3D33; --muted:#5C5B50;
+  --accent:#8A5636; --blush:#D2BCAF; --wood1:#B88A5A; --wood2:#A0744A;
+  --note-bg:#E9E3DE; --note-ink:#3D3D33; --btn:#996444; --onbtn:#FFFFFF;
   --cute:"Gochi Hand","Bradley Hand",cursive; --serif:"Instrument Serif",Georgia,serif; --body:"Nunito",system-ui,sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--white:#1B1714;--petal:#26201B;--line:#3B322A;--ink:#F3EBE2;--muted:#C4B3A2;--accent:#D9A878;--blush:#E7AEB6;--wood1:#8A6440;--wood2:#74522F;--note-bg:#4A3F1C;--note-ink:#FFF1BF;color-scheme:dark}}
-:root[data-theme="dark"]{--white:#1B1714;--petal:#26201B;--line:#3B322A;--ink:#F3EBE2;--muted:#C4B3A2;--accent:#D9A878;--blush:#E7AEB6;--wood1:#8A6440;--wood2:#74522F;--note-bg:#4A3F1C;--note-ink:#FFF1BF;color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--white:#2A2B26;--petal:#1F201C;--line:#3F4039;--ink:#ECE9E2;--muted:#B9B6AA;--accent:#D9A57F;--blush:#8A7468;--wood1:#8A6440;--wood2:#74522F;--note-bg:#2C2D28;--note-ink:#ECE9E2;--btn:#C98B62;--onbtn:#1F201C;color-scheme:dark}}
+:root[data-theme="dark"]{--white:#2A2B26;--petal:#1F201C;--line:#3F4039;--ink:#ECE9E2;--muted:#B9B6AA;--accent:#D9A57F;--blush:#8A7468;--wood1:#8A6440;--wood2:#74522F;--note-bg:#2C2D28;--note-ink:#ECE9E2;--btn:#C98B62;--onbtn:#1F201C;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
 .page{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px;display:flex;flex-direction:column;gap:36px}
@@ -35,7 +35,7 @@ img{max-width:100%;display:block}
 .socials a:focus-visible{outline:3px solid var(--blush);outline-offset:3px}
 .socials svg{width:18px;height:18px;display:block}
 .handle{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none}
-.hero{border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(59,42,32,.08)}
+.hero{border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(61,61,51,.08)}
 .hero-head{background:var(--petal);padding:28px 20px 24px;text-align:center;display:flex;flex-direction:column;gap:6px}
 .kicker,.eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8.5vw,48px);line-height:1.02;margin:0;text-wrap:balance}
@@ -64,10 +64,10 @@ figcaption{font-size:13px;color:var(--muted)}
 .shop{display:grid;grid-template-columns:1fr 40px;gap:14px;align-items:center;background:var(--petal);border:1.5px solid var(--ink);border-radius:18px;padding:14px 16px;text-decoration:none;color:var(--ink)}
 .shop > div{min-width:0}
 .shop:has(.thumb){grid-template-columns:64px 1fr 40px}
-.thumb{width:64px;height:64px;max-width:100%;object-fit:contain;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:4px}
+.thumb{width:64px;height:64px;max-width:100%;object-fit:contain;background:#FFFDFB;border:1px solid var(--line);border-radius:12px;padding:4px}
 .shop .name{font-family:var(--serif);font-size:22px;line-height:1.1}
 .shop .sub{font-size:13px;color:var(--muted);line-height:1.45}
-.arrow{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--white);display:grid;place-content:center;font-size:18px}
+.arrow{width:40px;height:40px;border-radius:50%;background:var(--btn);color:var(--onbtn);display:grid;place-content:center;font-size:18px}
 .shops{display:flex;flex-direction:column;gap:10px}
 .tip{font-family:var(--cute);font-size:21px;line-height:1.3;transform:rotate(-1deg);padding-left:4px;color:var(--accent)}
 .soon-wrap{border:1.5px dashed var(--ink);border-radius:22px;padding:22px 18px;display:flex;flex-direction:column;gap:14px;background:var(--petal)}
@@ -79,7 +79,7 @@ figcaption{font-size:13px;color:var(--muted)}
 .outro{background:var(--petal);border:1.5px solid var(--ink);border-radius:22px;padding:24px 20px;display:flex;flex-direction:column;gap:12px;text-align:center;align-items:center}
 .outro h2{font-size:30px}
 .outro p{margin:0}
-.cta{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border-radius:999px}
+.cta{display:inline-block;background:var(--btn);color:var(--onbtn);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border-radius:999px}
 footer{text-align:center;font-size:12px;color:var(--muted)}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

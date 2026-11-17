@@ -10,19 +10,19 @@
 <style>
 /* Layout: one phone-width column, like the journal itself: striped hello, then setup, tour, week plan, notes, privacy, questions */
 :root{
-  --bg:#F7F4F0; --card:#FFFFFF; --ink:#2F2428; --soft:#6E6166; --line:#E4DCD8;
-  --c1:#F0E3E3; --c2:#E8DCE0; --c3:#E2E7E3; --c4:#ECE7E2;
-  --accent:#8A5A66; --btn:#2F2428; --onbtn:#FFFFFF; --stripe:#EBDDE1; --done:#4E7A62;
+  --bg:#F7F4F1; --card:#FFFDFB; --ink:#3D3D33; --soft:#5C5B50; --line:#DDD4CD;
+  --c1:#E9E3DE; --c2:#ECE6E1; --c3:#E6E5DC; --c4:#E1DCD8;
+  --accent:#8A5636; --btn:#996444; --onbtn:#FFFFFF; --stripe:#E9E3DE; --done:#5C5B50;
   --hand:"Gochi Hand","Comic Sans MS",cursive; --serif:"Instrument Serif",Georgia,serif; --sans:"Nunito",system-ui,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1F2422; --card:#29302D; --ink:#ECEDEA; --soft:#AEB6B1; --line:#3B4541;
-  --c1:#3A2F33; --c2:#352D33; --c3:#2D3832; --c4:#36322D;
-  --accent:#E3AFC0; --btn:#ECEDEA; --onbtn:#1F2422; --stripe:#2C2629; --done:#93CDAE; color-scheme:dark}}
+  --bg:#1F201C; --card:#2A2B26; --ink:#ECE9E2; --soft:#B9B6AA; --line:#3F4039;
+  --c1:#2C2D28; --c2:#30332D; --c3:#30332D; --c4:#2C2D28;
+  --accent:#D9A57F; --btn:#C98B62; --onbtn:#1F201C; --stripe:#2C2D28; --done:#B9B6AA; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#1F2422; --card:#29302D; --ink:#ECEDEA; --soft:#AEB6B1; --line:#3B4541;
-  --c1:#3A2F33; --c2:#352D33; --c3:#2D3832; --c4:#36322D;
-  --accent:#E3AFC0; --btn:#ECEDEA; --onbtn:#1F2422; --stripe:#2C2629; --done:#93CDAE; color-scheme:dark}
+  --bg:#1F201C; --card:#2A2B26; --ink:#ECE9E2; --soft:#B9B6AA; --line:#3F4039;
+  --c1:#2C2D28; --c2:#30332D; --c3:#30332D; --c4:#2C2D28;
+  --accent:#D9A57F; --btn:#C98B62; --onbtn:#1F201C; --stripe:#2C2D28; --done:#B9B6AA; color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55}
 .wrap{max-width:620px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}

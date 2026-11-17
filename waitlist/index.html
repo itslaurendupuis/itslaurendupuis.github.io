@@ -11,11 +11,11 @@
 <style>
 /* Layout: one column. Striped hero with the signup, a sideways row of real app screenshots, three "what you get" cards, a privacy line, a second signup, crisis numbers, footer */
 :root{
-  --white:#FFFFFF; --petal:#F4EEE8; --blush:#E8DDD1; --pink:#EABCC2; --sage:#EDE4DA; --ink:#3B2A22; --muted:#7A685C; --line:#E3D6CA; --plum:#8A6B57;
+  --white:#FFFDFB; --petal:#F7F4F1; --blush:#E9E3DE; --pink:#D2BCAF; --sage:#E6E5DC; --ink:#3D3D33; --muted:#5C5B50; --line:#DDD4CD; --plum:#8A5636; --accent:#996444; --onaccent:#FFFFFF;
   --cute:"Gochi Hand","Bradley Hand",cursive; --serif:"Instrument Serif",Georgia,serif; --body:"Nunito",system-ui,sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--white:#2A221E;--petal:#1F1916;--blush:#2B231F;--pink:#B98A91;--sage:#2F2722;--ink:#F1E7DD;--muted:#BCA999;--line:#43362F;--plum:#D9B99B;color-scheme:dark}}
-:root[data-theme="dark"]{--white:#2A221E;--petal:#1F1916;--blush:#2B231F;--pink:#B98A91;--sage:#2F2722;--ink:#F1E7DD;--muted:#BCA999;--line:#43362F;--plum:#D9B99B;color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--white:#2A2B26;--petal:#1F201C;--blush:#2C2D28;--pink:#8A7468;--sage:#30332D;--ink:#ECE9E2;--muted:#B9B6AA;--line:#3F4039;--plum:#D9A57F;--accent:#C98B62;--onaccent:#1F201C;color-scheme:dark}}
+:root[data-theme="dark"]{--white:#2A2B26;--petal:#1F201C;--blush:#2C2D28;--pink:#8A7468;--sage:#30332D;--ink:#ECE9E2;--muted:#B9B6AA;--line:#3F4039;--plum:#D9A57F;--accent:#C98B62;--onaccent:#1F201C;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--petal);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
 a{color:inherit}
@@ -32,7 +32,7 @@ h1{font-family:var(--cute);font-weight:400;font-size:clamp(52px,12vw,84px);line-
 form.signup{display:flex;flex-direction:column;gap:10px;width:100%;max-width:360px;margin-top:6px}
 form.signup input{font:inherit;font-size:16px;padding:14px 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--white);color:var(--ink);text-align:center;width:100%}
 form.signup input:focus-visible,.cta:focus-visible{outline:3px solid var(--plum);outline-offset:2px}
-.cta{display:inline-block;font-family:var(--body);background:var(--ink);color:var(--white);border:0;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:16px 26px;border-radius:999px;cursor:pointer;width:100%}
+.cta{display:inline-block;font-family:var(--body);background:var(--accent);color:var(--onaccent);border:0;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:16px 26px;border-radius:999px;cursor:pointer;width:100%}
 .cta[disabled]{opacity:.6;cursor:wait}
 .fine{font-size:13.5px;color:var(--muted);margin:0}
 .msg{font-size:14px;font-weight:700;color:#A5532F;margin:0}
@@ -44,7 +44,7 @@ h2{font-family:var(--cute);font-weight:400;font-size:clamp(32px,7vw,42px);line-h
 .phones{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 18px;scroll-snap-type:x mandatory;scrollbar-width:none}
 .phones::-webkit-scrollbar{display:none}
 .phone{flex:0 0 200px;scroll-snap-align:center;margin:0;display:grid;gap:10px;justify-items:center}
-.phone .frame{width:200px;border:6px solid var(--ink);border-radius:30px;overflow:hidden;background:var(--white);box-shadow:0 10px 24px rgba(59,42,34,.12)}
+.phone .frame{width:200px;border:6px solid var(--ink);border-radius:30px;overflow:hidden;background:var(--white);box-shadow:0 10px 24px rgba(61,61,51,.12)}
 .phone img{display:block;width:100%;height:auto}
 .phone figcaption{font-family:var(--cute);font-size:19px;line-height:1.15;text-align:center;max-width:190px}
 @media (min-width:880px){.phones{justify-content:center;overflow:visible}}
@@ -80,7 +80,7 @@ footer .soc a{text-decoration:none;color:var(--ink)}
 <header class="hero"><div class="inner">
   <span class="kicker">The waitlist · from Lauren</span>
   <h1>Get in first.</h1>
-  <p class="lede">I built this journal after a really hard postpartum with my second baby, and it's for any mom in postpartum, diagnosed or not. It lives on your phone, and most of it is just taps. I made it that way because my capacity was shot, and I bet yours is too.</p>
+  <p class="lede">I built this journal after a really hard postpartum with my second baby, and it's made for every single mom in postpartum. It lives on your phone, and most of it is just taps. I made it that way because my capacity was shot, and I bet yours is too.</p>
   <form class="signup" action="https://app.kit.com/forms/10195710/subscriptions" method="post" data-form>
     <label for="email1" style="position:absolute;left:-9999px">Your email</label>
     <input id="email1" name="email_address" type="email" required autocomplete="email" placeholder="Your email address">
