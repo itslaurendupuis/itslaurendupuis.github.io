@@ -54,6 +54,9 @@ h2{font-family:var(--cute);font-weight:400;font-size:clamp(32px,7vw,42px);line-h
 .get b{font-family:var(--cute);font-weight:400;font-size:24px;line-height:1.05}
 .get p{margin:0;font-size:15px}
 @media (max-width:640px){.gets{grid-template-columns:1fr}}
+.helps{list-style:none;padding:0;margin:0 auto;max-width:620px;display:grid;gap:10px}
+.helps li{position:relative;background:var(--white);border:1.5px solid var(--ink);border-radius:16px;padding:12px 16px 12px 44px;font-size:16px}
+.helps li::before{content:"\2661";position:absolute;left:16px;top:10px;font-size:18px;color:var(--plum)}
 .private{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;background:var(--white);border-radius:20px;padding:16px 18px;border:1.5px dashed var(--line);margin-top:6px}
 .private .lock{width:44px;height:44px;border-radius:12px;background:var(--petal);display:grid;place-items:center}
 .private p{margin:0}
@@ -99,12 +102,23 @@ footer .soc a{text-decoration:none;color:var(--ink)}
 </div></section>
 
 <section><div class="inner">
+  <h2>What it helps you do</h2>
+  <ul class="helps">
+    <li>See how you're really doing in a few taps, without writing essays.</li>
+    <li>Have the words when you don't have any. There are ready-made texts, and a fill-in message for telling someone you're not okay.</li>
+    <li>Walk into appointments knowing what to say. It builds a summary for your therapist or doctor from what you write.</li>
+    <li>Have somewhere to go on the worst days that's quiet and simple, with help one tap away.</li>
+    <li>Find little pieces of yourself again, and actually see them add up.</li>
+  </ul>
+</div></section>
+
+<section><div class="inner">
   <h2>What you get on the list</h2>
   <p class="sub">For any postpartum mom who's struggling, diagnosed or not.</p>
   <div class="gets">
     <div class="get"><b>A free page, today</b><p>A printable morning check-in. Same questions as the journal. Print it or fill it in on your phone.</p></div>
     <div class="get"><b>In 3 days early</b><p>The waitlist gets in first, before it opens to everyone.</p></div>
-    <div class="get"><b>The launch price</b><p>$29 one time for the first week. No subscription. Then it goes up to $39.</p></div>
+    <div class="get"><b>The launch price</b><p>$29 for the first week, and you only pay it once. There's no subscription, so the journal is yours to keep. After that first week, it goes up to $39.</p></div>
   </div>
   <div class="private"><span class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><p><b>Nobody can read it but you.</b> Everything you write is scrambled on your phone before it's saved. Not me, not anyone.</p></div>
 </div></section>
