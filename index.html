@@ -56,6 +56,14 @@ h1 em{font-family:var(--cute);font-style:normal}
 .socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 .socials a{font-size:13px;font-weight:700;color:var(--ink);background:var(--white);border:1.5px solid var(--ink);border-radius:999px;padding:8px 14px;text-decoration:none}
 footer{text-align:center;font-size:12px;color:var(--muted)}
+.feature{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;background:repeating-linear-gradient(90deg,var(--petal) 0 22px,var(--blush) 22px 44px);border:1.5px solid var(--ink);border-radius:22px;padding:20px 18px;text-decoration:none;color:var(--ink);box-shadow:0 8px 24px rgba(61,61,51,.08)}
+.feature .f-title{font-family:var(--serif);font-size:30px;line-height:1.05}
+.feature .f-sub{font-family:var(--cute);font-size:20px;margin-top:-4px}
+.feature p{margin:0;color:var(--muted);font-size:15px;max-width:34ch}
+.feature.app{display:grid;grid-template-columns:96px 1fr;text-align:left;align-items:center;gap:14px;background:var(--petal)}
+.feature.app img{width:96px;height:auto;border-radius:14px;border:1px solid var(--line);display:block}
+.feature.app .cta{justify-self:start}
+.free .tx{width:52px;height:67px;border-radius:6px;border:1px solid var(--line);background:var(--blush);display:grid;place-content:center;font-family:var(--cute);font-size:17px;line-height:1;text-align:center}
 </style>
 </head>
 <body>
@@ -68,20 +76,24 @@ footer{text-align:center;font-size:12px;color:var(--muted)}
     <span class="tag">Faith · boy mom x2 · south louisiana</span>
   </header>
 
-  <article class="hero">
-    <div class="hero-art" aria-label="Your photo goes here"><div><div class="t">From my floor to yours</div><div class="s">a letter from me to you</div></div></div>
-    <div class="hero-body">
-      <span class="kicker">Hey friend</span>
-      <h2>For every mom on the <em>bathroom floor.</em></h2>
-      <p>Whether someone's behind you or not, I wrote you a letter about where I've been and why I don't want you going through this alone. Every week, I also send one email to everyone on my list: a piece of my life, something I learned, or something that's helped me.</p>
-      <a class="cta" href="/letter/">Send it to me →</a>
-      <span class="note">you're doing better than you think</span>
+  <a class="feature app" href="/waitlist/">
+    <img src="/waitlist/img/1-today.jpg" alt="">
+    <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+      <span class="kicker">Coming soon</span>
+      <div class="f-title" style="font-size:26px">Finding Me Again</div>
+      <p>The journal I made for moms in postpartum. It lives on your phone, and most of it is just taps.</p>
+      <span class="cta">Save my spot →</span>
     </div>
-  </article>
+  </a>
 
   <section class="section" aria-label="Free for you">
     <span class="label">Free for you</span>
     <div class="free">
+      <a href="/letter/">
+        <div class="tx">a<br>letter</div>
+        <div><div class="name">From my floor to yours</div><div class="sub">A letter from me to you, plus one email a week.</div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+      </a>
       <a href="https://lauren-dupuis.kit.com/fd32df4b87" target="_blank" rel="noopener">
         <img src="https://itslaurendupuis.github.io/img/how-to-help-me-right-now.png" alt="" loading="lazy">
         <div><div class="name">How to help me right now</div><div class="sub">A note to hand someone when you can't find the words.</div></div>
