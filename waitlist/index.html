@@ -47,7 +47,8 @@ h2{font-family:var(--cute);font-weight:400;font-size:clamp(32px,7vw,42px);line-h
 .phone .frame{width:200px;border:6px solid var(--ink);border-radius:30px;overflow:hidden;background:var(--white);box-shadow:0 10px 24px rgba(61,61,51,.12)}
 .phone img{display:block;width:100%;height:auto}
 .phone figcaption{font-family:var(--cute);font-size:19px;line-height:1.15;text-align:center;max-width:190px}
-@media (min-width:880px){.phones{justify-content:center;overflow:visible}}
+.phones{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+.swipehint{text-align:center;font-family:var(--cute);font-size:20px;color:var(--plum);margin:2px 0 0}
 .gets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .get{background:var(--white);border:1.5px solid var(--ink);border-radius:18px;padding:16px;display:grid;gap:6px;align-content:start}
 .get:nth-child(1){background:var(--blush)} .get:nth-child(3){background:var(--sage)}
@@ -102,9 +103,15 @@ footer .soc a{text-decoration:none;color:var(--ink)}
   <div class="phones" role="list">
     <figure class="phone" role="listitem"><div class="frame"><img src="img/1-today.jpg" alt="The Today screen: Hey. You made it here, with morning and evening check-ins." width="480" height="951" loading="lazy"></div><figcaption>A home base that's kind to you</figcaption></figure>
     <figure class="phone" role="listitem"><div class="frame"><img src="img/2-morning.jpg" alt="Morning check-in asking about energy, with five battery buttons." width="480" height="951" loading="lazy"></div><figcaption>Check-ins that are mostly taps</figcaption></figure>
+    <figure class="phone" role="listitem"><div class="frame"><img src="img/7-therapist.jpg" alt="The For my therapist or doctor page that builds a summary" width="480" height="951" loading="lazy"></div><figcaption>A list for your therapist or doctor</figcaption></figure>
+    <figure class="phone" role="listitem"><div class="frame"><img src="img/8-texts.jpg" alt="Texts I can send, with a fill-in message for telling someone you are not okay" width="480" height="951" loading="lazy"></div><figcaption>Texts you can send when you have no words</figcaption></figure>
+    <figure class="phone" role="listitem"><div class="frame"><img src="img/4-struggling.jpg" alt="The I'm struggling right now screen: dark, quiet, with a breathing circle" width="480" height="951" loading="lazy"></div><figcaption>A quiet place for the worst moments</figcaption></figure>
+    <figure class="phone" role="listitem"><div class="frame"><img src="img/9-night.jpg" alt="3am feeding mode with a dim screen and a feed timer" width="480" height="951" loading="lazy"></div><figcaption>3am feeding mode, dim and quiet</figcaption></figure>
+    <figure class="phone" role="listitem"><div class="frame"><img src="img/3-week.jpg" alt="Your week in charts: sleep and how you felt" width="480" height="951" loading="lazy"></div><figcaption>Your week, in plain words and charts</figcaption></figure>
     <figure class="phone" role="listitem"><div class="frame"><img src="img/5-jar.jpg" alt="A jar of little good moments with one pulled out." width="480" height="951" loading="lazy"></div><figcaption>A jar for your good moments</figcaption></figure>
     <figure class="phone" role="listitem"><div class="frame"><img src="img/6-garden.jpg" alt="A garden with a flower for each day, a bee and a butterfly." width="480" height="951" loading="lazy"></div><figcaption>A flower for every day you show up</figcaption></figure>
   </div>
+  <p class="swipehint">Swipe to see all 9 →</p>
 </div></section>
 
 <section><div class="inner">
