@@ -505,6 +505,10 @@ footer p{margin:0}
 .rs .st-mid{position:absolute;left:0;right:0;overflow:hidden}
 .rs .st-mid img{display:block;width:100%;height:auto;will-change:transform}
 .rs [hidden]{display:none!important}
+/* 2026-11-22: the recordings have a 10px light border around the app; trim it so the screen fills the phone edge to edge */
+/* + a thin strip under the bottom bar (like a real phone's home bar area) so Summaries clears the rounded corner; JS paints it the bottom bar's color */
+.scr.rs{aspect-ratio:468/986}
+.rs video,.rs .still{inset:auto;left:-2.1368%;top:-1.0142%;width:104.2735%;height:98.9858%}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 
@@ -741,23 +745,26 @@ footer p{margin:0}
         top=st.querySelector('.st-top'),bot=st.querySelector('.st-bot'),mid=st.querySelector('.st-mid'),img=mid.querySelector('img'),
         name=VID[fig.dataset.demo],mode='video',cur=null,seen=false,timer=null,raf=null;
     if(reduce){v.controls=true;v.preload='metadata';}
+    function edge(el,w,h){try{var c=document.createElement('canvas');c.width=c.height=1;var x=c.getContext('2d');x.drawImage(el,w/2,h-3,1,1,0,0,1,1);var d=x.getImageData(0,0,1,1).data;scr.style.backgroundColor='rgb('+d[0]+','+d[1]+','+d[2]+')';}catch(e){}}
+    v.addEventListener('loadeddata',function(){if(mode==='video')edge(v,v.videoWidth,v.videoHeight);});
+    img.addEventListener('load',function(){if(mode==='still')edge(img,img.naturalWidth,img.naturalHeight);});
     function stopScroll(){clearTimeout(timer);cancelAnimationFrame(raf);}
     function video(){
       stopScroll();mode='video';st.hidden=true;v.hidden=false;
       if(!seen)return;
       var s='real/vid/'+name+'-'+lookNow()+'.mp4';
-      if(v.getAttribute('src')!==s){v.src=s;}
+      if(v.getAttribute('src')!==s){v.src=s;}else if(v.readyState>=2)edge(v,v.videoWidth,v.videoHeight);
       try{v.currentTime=0;}catch(e){}
       if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
     }
     function still(id){
       stopScroll();mode='still';cur=id;
       var L=lookNow(),m=(META[L]||{})[id];if(!m)return;
-      var url='real/img/'+id+'-'+L+'.jpg',s=(scr.clientWidth||250)/390;
+      var url='real/img/'+id+'-'+L+'.jpg',s=((scr.clientWidth*488/468)||250)/390;
       top.style.backgroundImage=bot.style.backgroundImage='url("'+url+'")';
       top.style.height=m.bar*s+'px';bot.style.height=m.tab*s+'px';bot.hidden=!m.tab;
       mid.style.top=m.bar*s+'px';mid.style.bottom=m.tab*s+'px';
-      if(img.getAttribute('src')!==url)img.src=url;
+      if(img.getAttribute('src')!==url)img.src=url;else if(img.complete&&img.naturalWidth)edge(img,img.naturalWidth,img.naturalHeight);
       var maxY=Math.max(0,m.h-780),y0=Math.max(0,Math.min(maxY,m.anchor?m.anchor-m.bar-12:0)),y=y0;
       function at(y){img.style.transform='translateY('+(-(y+m.bar)*s)+'px)';}
       at(y0);v.pause();v.hidden=true;st.hidden=false;
