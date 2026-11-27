@@ -103,6 +103,22 @@ footer{border-top:1.5px dashed var(--line);padding-block:18px 30px;text-align:ce
 footer .soc{display:flex;justify-content:center;gap:16px;margin-bottom:8px;font-weight:800}
 footer .soc a{text-decoration:none;color:var(--ink)}
 @media (prefers-reduced-motion:no-preference){.cta{transition:transform .15s}.cta:hover{transform:translateY(-1px)}}
+/* 2026-11-26: big tour card (her ask: tour button more obvious) */
+.tourcard{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;max-width:560px;margin:26px auto 0;padding:20px 22px;background:var(--white);border:2px solid var(--ink);border-radius:24px;box-shadow:0 10px 24px rgba(61,61,51,.14);text-decoration:none;color:var(--ink);transform:rotate(-.6deg)}
+.tc-phones{position:relative;width:150px;height:150px;display:block}
+.tc-phones img{position:absolute;top:8px;width:64px;height:auto;max-width:none;border:3px solid var(--ink);border-radius:13px;background:var(--white);box-shadow:0 6px 12px rgba(61,61,51,.16)}
+.tc-phones img:nth-child(1){left:0;transform:rotate(-9deg)}
+.tc-phones img:nth-child(2){left:43px;top:0;z-index:2}
+.tc-phones img:nth-child(3){left:86px;transform:rotate(9deg)}
+.tc-text{display:grid;gap:6px;justify-items:start}
+.tc-text b{font-family:var(--cute);font-weight:400;font-size:clamp(30px,6.5vw,38px);line-height:1}
+.tc-text>span{font-size:15.5px;line-height:1.45}
+.tc-btn{display:inline-block;margin-top:6px;background:var(--accent);color:var(--onaccent);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:13px 20px;border-radius:999px}
+.tourcard:focus-visible{outline:3px solid var(--plum);outline-offset:4px}
+@media (prefers-reduced-motion:no-preference){.tourcard{transition:transform .2s}.tourcard:hover{transform:rotate(0) translateY(-2px)}}
+@media (max-width:480px){.tourcard{grid-template-columns:1fr;justify-items:center;text-align:center;padding:20px 18px 22px}.tc-text{justify-items:center}}
+.tourpeek{text-align:center;margin:10px 0 0;font-weight:700;font-size:15px}
+.tourpeek a{color:var(--plum)}
 </style>
 
 </head>
@@ -126,6 +142,7 @@ footer .soc a{text-decoration:none;color:var(--ink)}
     <p class="msg" role="status" hidden></p>
   </form>
   <p class="fine">Free. Plus a printable morning check-in, right now.<br>No spam. Unsubscribe anytime.</p>
+  <p class="tourpeek">Want to look around first? <a href="/inside/">Take the full tour →</a></p>
 </div></header>
 
 <section><div class="inner">
@@ -142,7 +159,10 @@ footer .soc a{text-decoration:none;color:var(--ink)}
     <figure class="phone" role="listitem"><div class="frame"><img src="img/6-garden.jpg" alt="A garden with a flower for each day, a bee and a butterfly." width="480" height="951" loading="lazy"></div><figcaption>A flower for every day you show up</figcaption></figure>
   </div>
   <p class="swipehint">Swipe to see 8 more →</p>
-  <p class="tourlink"><a class="cta" href="/inside/">Take the full tour →</a></p>
+  <a class="tourcard" href="/inside/">
+    <span class="tc-phones" aria-hidden="true"><img src="img/tour-S.jpg" alt="" width="185" height="400" loading="lazy"><img src="img/tour-D.jpg" alt="" width="185" height="400" loading="lazy"><img src="img/tour-L.jpg" alt="" width="185" height="400" loading="lazy"></span>
+    <span class="tc-text"><b>Take the full tour</b><span>Tap through every screen of the journal, in every style.</span><span class="tc-btn">Start the tour →</span></span>
+  </a>
 </div></section>
 
 <section><div class="inner">
