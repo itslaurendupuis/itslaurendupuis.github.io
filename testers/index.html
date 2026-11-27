@@ -123,7 +123,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
     <div class="step" data-k="s1"><button class="tick" aria-label="Mark step 1 done">1</button><div>
       <h3>Open the journal on your phone</h3>
       <p>Use Safari on an iPhone or Chrome on Android. Not inside Instagram or Facebook, because the home screen step won't work there.</p>
-      <div class="url"><code id="appurl">finding-me-again.web.app</code><button class="btn ghost" id="copyurl" type="button">Copy</button><a class="btn" href="https://finding-me-again.web.app" target="_blank" rel="noopener">Open it</a></div>
+      <div class="url"><code id="appurl">journal.itslaurendupuis.com</code><button class="btn ghost" id="copyurl" type="button">Copy</button><a class="btn" href="https://journal.itslaurendupuis.com" target="_blank" rel="noopener">Open it</a></div>
     </div></div>
     <div class="step" data-k="s2"><button class="tick" aria-label="Mark step 2 done">2</button><div>
       <h3>Make your account</h3>
@@ -248,7 +248,7 @@ function paintSteps(){
 document.getElementById("steps").addEventListener("click", e => { const b = e.target.closest(".tick"); if(!b) return; const k = b.closest(".step").dataset.k; st[k] = !st[k]; save(); paintSteps(); });
 document.getElementById("copyurl").addEventListener("click", async e => {
   const b = e.currentTarget;
-  try{ await navigator.clipboard.writeText("https://finding-me-again.web.app"); b.textContent = "Copied"; }
+  try{ await navigator.clipboard.writeText("https://journal.itslaurendupuis.com"); b.textContent = "Copied"; }
   catch(_){ const r = document.createRange(); r.selectNodeContents(document.getElementById("appurl")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; }
   setTimeout(() => b.textContent = "Copy", 1800);
 });
